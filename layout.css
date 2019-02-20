@@ -3,12 +3,13 @@
   color: #000095;
   display: table;
   font-family: sans-serif;
-  font-size: 16vw;
+  font-size: 4vw;
   font-weight: bold;
   height: 100%;
   left: 0;
+  letter-spacing: 2vw;
+  line-height: 6vw;
   position: absolute;
-  text-align: center;
   top: 0;
   width: 100%;
 }
@@ -21,26 +22,9 @@
 .inner {
   margin-left: auto;
   margin-right: auto;
-  width: 80vw;
+  width: 60vw;
 }
 
-.main {
-  width: 100%;
-}
-
-#target {
+.homing {
   color: #ffffff;
-}
-
-#input {
-  background-color: inherit;
-  border: none;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  letter-spacing: inherit;
-  outline: none;
-  text-align: inherit;
-  width: inherit;
 }

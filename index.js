@@ -38,6 +38,11 @@ const state = {
 
 // actions --------------------------------------------------------------------
 
+const sanitise = s => {
+  const m = s.match(/\p{L}+/u)
+  return m ? m[0] : ""
+}
+
 const actions = {
   onKeydown: e => (state, actions) => {
     if (e.code === "Space") {
@@ -46,7 +51,9 @@ const actions = {
     }
   },
   afterSpace: () => state => {
-    if (document.getElementById("input").value.trim() === state.target) {
+    const inputElement = document.getElementById("input")
+    inputElement.value = sanitise(inputElement.value)
+    if (inputElement.value === state.target) {
       return { target: choose(targets), input: "" }
     }
   },
